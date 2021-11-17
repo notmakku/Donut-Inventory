@@ -1,5 +1,13 @@
+package com.example.demo;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.persistence.*;
+
 @Entity
-@Data @NoArgsConstructor
+@Data
+@NoArgsConstructor
 public class Donut {
 
     @Id
@@ -19,21 +27,4 @@ public class Donut {
         this.costDollars = costDollars;
         this.numberAvailable = numberAvailable;
     }
-}
-public enum DonutToppings {
-
-    CHOCOLATE("Chocolate Icing"),
-    SPRINKLES("Sprinkles"),
-    MAPLE("Maple Icing"),
-    GLAZED("Sugar Glaze"),
-    BACON("Bacon"),
-    POWDERED_SUGAR("Powdered Sugar"),
-    NONE("None");
-
-    private final String value;
-
-    DonutToppings(String value) {
-        this.value = value;
-    }
-
 }
